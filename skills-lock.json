@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "skills": {
+    "aframe-webxr": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/aframe-webxr/SKILL.md",
+      "computedHash": "f8004363f0d9f7d1f57d8bbbcd3e6318ff4965c041dd677a86532d6464621425"
+    },
+    "animejs": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/animejs/SKILL.md",
+      "computedHash": "468ed993be0d281fe4069e11a1a030cc6bc15d294b6ca20bcdcbc2924de91791"
+    },
+    "api-design": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/backend-apis/api-design/SKILL.md",
+      "computedHash": "d7721b31618e73019d90590a5758a1fa7ecb92a9512b60027b2adb4717b86053"
+    },
+    "babylonjs-engine": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/babylonjs-engine/SKILL.md",
+      "computedHash": "1335c8c182b1b99f65fc5db5eb4142e74be544527371f7f881998ae6a8520749"
+    },
+    "backend-core": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/backend-apis/backend-core/SKILL.md",
+      "computedHash": "7eaf57e5c256ffce4ab6a1e4bfc73d9f5e7412bfde801da7bb8c5092b99a4e46"
+    },
+    "barba-js": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/barba-js/SKILL.md",
+      "computedHash": "42507eb6a94d783161e2042e0e29bf1da2a19d581f740e01362646190d0a68b7"
+    },
+    "database-architecture": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/databases-data/database-architecture/SKILL.md",
+      "computedHash": "3629c1ed618a5bab48e37b7ace332987f8bf21e950aea608569731c6430523ab"
+    },
+    "frontend-core": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui/frontend-core/SKILL.md",
+      "computedHash": "ff9672e988a52cf22c8090ed1fc8f454368987dc4d1ca2dc747cbc1105d49e25"
+    },
+    "game-developer": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/game-developer/SKILL.md",
+      "computedHash": "f3fe0ec8a36bf09f2e4fc9d55f213160acfce2b6400976f5455d1a513f2b7f5b"
+    },
+    "gsap-core": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-core/SKILL.md",
+      "computedHash": "4580b3cce4cc5aa3f170c3d580ad792a444961a302364c038558ecf45688ad48"
+    },
+    "gsap-frameworks": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-frameworks/SKILL.md",
+      "computedHash": "7eabfb188cea320800012c4210fa7fed3093824da422f06c0036446ab0aaf91d"
+    },
+    "gsap-performance": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-performance/SKILL.md",
+      "computedHash": "b54fcd0dfc634bd678d80ebdb62a610d49c6e8e70511485f95fecf5c1f877b32"
+    },
+    "gsap-plugins": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-plugins/SKILL.md",
+      "computedHash": "70c7bd34eba825468287801c44df38deb15001776d245f090dd24262ad1946e5"
+    },
+    "gsap-react": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-react/SKILL.md",
+      "computedHash": "d200c5229de2968d13afe63522d82a1c90c1abbbd1f919a02d96f890e938039d"
+    },
+    "gsap-scrolltrigger": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-scrolltrigger/SKILL.md",
+      "computedHash": "38080bc17295e15b295af2f4dc7db0c1be8b56cfaa86b9027f8401810629cd42"
+    },
+    "gsap-timeline": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-timeline/SKILL.md",
+      "computedHash": "6bbe35afbeca3a28471b6bb81a36cc48c94f86f194364d4be95c10c954adcc89"
+    },
+    "gsap-utils": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/gsap-utils/SKILL.md",
+      "computedHash": "fb4833457131a2a5945a4cfb44236737f20b09e0f8ee785ad8ec7fc44d715280"
+    },
+    "gstack": {
+      "source": "garrytan/gstack",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "25f6cf874fc6e003f6d2c595f6d783f914b2ce4a4260fe5868b891245b442eff"
+    },
+    "incremental-implementation": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agent-meta/incremental-implementation/SKILL.md",
+      "computedHash": "9d6891eb8df3c0d8422ebd623a2440591320c02f9fa65dc48c58e5c8d85abf8f"
+    },
+    "loop-orchestrator": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agent-meta/loop-orchestrator/SKILL.md",
+      "computedHash": "5d9598fd54a91e57192deb2770392dfbf5be8bbe3b03ff2cc6c60c554e1b40d5"
+    },
+    "lottie-animations": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/lottie-animations/SKILL.md",
+      "computedHash": "2c1fdcc57576bef5701ab80430cbb21a839599cd6e615d2e3c86a4050c51b2a5"
+    },
+    "microinteractions": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/microinteractions/SKILL.md",
+      "computedHash": "ea3179480ecf165792629015f2faebbe8bc60c8b169c0860e4702e668e002324"
+    },
+    "motion": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/motion/SKILL.md",
+      "computedHash": "15d8afbcdd7703be98eec8e51e60d3a5bb066d6733a18a9ec7d1c7b5c30b21e7"
+    },
+    "nextjs": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui/nextjs/SKILL.md",
+      "computedHash": "c7a3b670c6ce8f625d94b48d3ca3db36626f918305a0f40a17503ba69b9f8810"
+    },
+    "pixijs-2d": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/pixijs-2d/SKILL.md",
+      "computedHash": "38b7d687a0cb7981ba456b1b1034f4e41cb7707fbdb8b25b46525cab25e088d4"
+    },
+    "planning-and-task-breakdown": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agent-meta/planning-and-task-breakdown/SKILL.md",
+      "computedHash": "fb978015a416c88091c2d752c998cac7f06c19d69bc2376aadb7f3b32e31d939"
+    },
+    "playcanvas-engine": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/playcanvas-engine/SKILL.md",
+      "computedHash": "fe076259c2bbbca37dce705ac95e0f90540fbf2c99441907ac23675f89770de2"
+    },
+    "playwright-expert": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/testing-quality/playwright-expert/SKILL.md",
+      "computedHash": "3718cb4e6c11f8875f94f78924652dccdd397bf093dddda8eab2589f3edf6e03"
+    },
+    "react-spring-physics": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/react-spring-physics/SKILL.md",
+      "computedHash": "32838785a801c9c9b24fe66c0d7fb651b81984e6668d59bce0303b7c2b04c999"
+    },
+    "react-three-fiber": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/react-three-fiber/SKILL.md",
+      "computedHash": "9da363a62d743b69c33368b3f8050b6834db61dca88561fceb164dfc42858ccb"
+    },
+    "security": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/devops-cloud/security/SKILL.md",
+      "computedHash": "28d67086785ba760ca26d43d62e31da109b878625d524d2852740c0ab1ae1060"
+    },
+    "steve-jobs-design-review": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/steve-jobs-design-review/SKILL.md",
+      "computedHash": "d44c6d36c20a22f3b5bc01b05b78c4a8bfea700a938cde24beb353e827f19f89"
+    },
+    "tailwind-css": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui/tailwind-css/SKILL.md",
+      "computedHash": "d2651f320f67e68630097f754f3435d93453aba9dff397278503dd491494b12b"
+    },
+    "testing": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/testing-quality/testing/SKILL.md",
+      "computedHash": "0ca75113774dbd217bd91a59c6e7dc84e2c864d7cbe0e55931e1e7a925222dc5"
+    },
+    "threejs-webgl": {
+      "source": "Emmraan/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/animation-webgl/threejs-webgl/SKILL.md",
+      "computedHash": "343d89bf61c11718d1000f2c8a3557d0228fb6580c84004101f302ba43d7873a"
+    },
+    "typescript": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui/typescript/SKILL.md",
+      "computedHash": "917f5675a563d35d9b3887b528f17905c414f76c70dad91411ef1456fb03c1c3"
+    },
+    "using-agent-skills": {
+      "source": "Emmraan/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agent-meta/using-agent-skills/SKILL.md",
+      "computedHash": "cce5ed388ce66271b0441a0efa3c6a727444a809388b3c00b3243285329ec846"
+    }
+  }
+}

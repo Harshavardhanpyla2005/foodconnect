@@ -1,0 +1,459 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* FoodConnect 10K Semantic Color Tokens (Section 5) */
+  --color-fc-obsidian: #07110D;
+  --color-fc-forest: #0B3B2E;
+  --color-fc-emerald: #18C77A;
+  --color-fc-mint: #7DE2B2;
+  --color-fc-amber: #F4B942;
+  --color-fc-orange: #F97316;
+  --color-fc-blue: #4DA3FF;
+  --color-fc-cream: #FFF8E7;
+  --color-fc-text: #F5F7F5;
+  --color-fc-text-secondary: #B8C8BF;
+  --color-fc-text-muted: #7F9188;
+  --color-fc-border: rgba(255, 255, 255, 0.08);
+
+  /* FoodConnect Core Brand & Surfaces */
+  --color-brand-forest: var(--brand-forest);
+  --color-brand-forest-hover: var(--brand-forest-hover);
+  --color-brand-terracotta: var(--brand-terracotta);
+  --color-brand-amber: var(--brand-amber);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-charcoal: var(--brand-charcoal);
+
+  /* Component & UI Semantic Tokens */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Impact & Analytics Chart Tokens */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar Tokens */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Radius Tokens - Moderate rounded corners (no excessive pill UI) */
+  --radius-xs: calc(var(--radius) * 0.5);
+  --radius-sm: calc(var(--radius) * 0.7);
+  --radius-md: calc(var(--radius) * 0.85);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.3);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-3xl: calc(var(--radius) * 2.0);
+}
+
+:root {
+  /* =========================================================================
+     FoodConnect Design System - Light Mode (Light-First Humanitarian & Tech)
+     ========================================================================= */
+
+  /* Surfaces: Warm, welcoming cream / linen undertones */
+  --background: oklch(0.985 0.008 85);
+  --foreground: oklch(0.20 0.02 65);
+
+  --card: oklch(0.998 0.003 85);
+  --card-foreground: oklch(0.20 0.02 65);
+
+  --popover: oklch(0.998 0.003 85);
+  --popover-foreground: oklch(0.20 0.02 65);
+
+  /* Primary: Deep natural forest/botanical green - Trust, vitality, sustainability */
+  --primary: oklch(0.36 0.095 152);
+  --primary-foreground: oklch(0.985 0.005 85);
+  --brand-forest: oklch(0.36 0.095 152);
+  --brand-forest-hover: oklch(0.32 0.095 152);
+
+  /* Food-inspired secondary accents: warm terracotta, amber, oat */
+  --secondary: oklch(0.945 0.015 80);
+  --secondary-foreground: oklch(0.24 0.03 65);
+
+  --muted: oklch(0.952 0.010 85);
+  --muted-foreground: oklch(0.48 0.025 65);
+
+  --accent: oklch(0.935 0.025 75);
+  --accent-foreground: oklch(0.28 0.05 50);
+
+  --brand-terracotta: oklch(0.58 0.14 45);
+  --brand-amber: oklch(0.72 0.14 85);
+  --brand-cream: oklch(0.985 0.008 85);
+  --brand-charcoal: oklch(0.20 0.02 65);
+
+  /* Destructive: Warm brick red (humanitarian urgency, not neon) */
+  --destructive: oklch(0.53 0.18 28);
+  --destructive-foreground: oklch(0.985 0.005 85);
+
+  /* Borders & Inputs: Soft warm stone */
+  --border: oklch(0.895 0.012 85);
+  --input: oklch(0.895 0.012 85);
+  --ring: oklch(0.36 0.095 152);
+
+  /* Chart Colors (Impact Analytics: Forest, Terracotta, Harvest Gold, River Teal, Earth Ochre) */
+  --chart-1: oklch(0.42 0.11 152);
+  --chart-2: oklch(0.58 0.14 45);
+  --chart-3: oklch(0.72 0.14 85);
+  --chart-4: oklch(0.52 0.09 210);
+  --chart-5: oklch(0.64 0.10 65);
+
+  /* Moderate radius: 10px base (clean, friendly, moderate - never full pill) */
+  --radius: 0.625rem;
+
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.975 0.010 85);
+  --sidebar-foreground: oklch(0.20 0.02 65);
+  --sidebar-primary: oklch(0.36 0.095 152);
+  --sidebar-primary-foreground: oklch(0.985 0.005 85);
+  --sidebar-accent: oklch(0.945 0.015 80);
+  --sidebar-accent-foreground: oklch(0.24 0.03 65);
+  --sidebar-border: oklch(0.895 0.012 85);
+  --sidebar-ring: oklch(0.36 0.095 152);
+
+  /* FoodConnect Status Tokens - Light Mode */
+  --status-available-bg: oklch(0.95 0.05 148);
+  --status-available-border: oklch(0.82 0.09 148);
+  --status-available-text: oklch(0.28 0.09 148);
+
+  --status-matching-bg: oklch(0.95 0.035 240);
+  --status-matching-border: oklch(0.82 0.075 240);
+  --status-matching-text: oklch(0.30 0.085 240);
+
+  --status-requested-bg: oklch(0.96 0.045 75);
+  --status-requested-border: oklch(0.84 0.09 75);
+  --status-requested-text: oklch(0.36 0.095 65);
+
+  --status-accepted-bg: oklch(0.95 0.045 175);
+  --status-accepted-border: oklch(0.82 0.085 175);
+  --status-accepted-text: oklch(0.28 0.085 175);
+
+  --status-collection-assigned-bg: oklch(0.95 0.035 295);
+  --status-collection-assigned-border: oklch(0.84 0.075 295);
+  --status-collection-assigned-text: oklch(0.32 0.085 295);
+
+  --status-collected-bg: oklch(0.94 0.045 215);
+  --status-collected-border: oklch(0.82 0.085 215);
+  --status-collected-text: oklch(0.28 0.085 215);
+
+  --status-distributed-bg: oklch(0.94 0.055 145);
+  --status-distributed-border: oklch(0.80 0.105 145);
+  --status-distributed-text: oklch(0.24 0.095 145);
+
+  --status-verified-bg: oklch(0.95 0.045 155);
+  --status-verified-border: oklch(0.80 0.095 155);
+  --status-verified-text: oklch(0.26 0.095 155);
+
+  --status-closed-bg: oklch(0.94 0.012 85);
+  --status-closed-border: oklch(0.84 0.018 85);
+  --status-closed-text: oklch(0.40 0.025 85);
+
+  --status-active-need-bg: oklch(0.95 0.055 45);
+  --status-active-need-border: oklch(0.82 0.115 45);
+  --status-active-need-text: oklch(0.35 0.125 35);
+
+  --status-partially-fulfilled-bg: oklch(0.96 0.045 88);
+  --status-partially-fulfilled-border: oklch(0.84 0.095 88);
+  --status-partially-fulfilled-text: oklch(0.38 0.085 75);
+
+  --status-fulfilled-bg: oklch(0.94 0.055 150);
+  --status-fulfilled-border: oklch(0.80 0.105 150);
+  --status-fulfilled-text: oklch(0.24 0.095 150);
+
+  --status-expired-bg: oklch(0.93 0.015 50);
+  --status-expired-border: oklch(0.82 0.025 50);
+  --status-expired-text: oklch(0.38 0.035 50);
+
+  --status-pending-bg: oklch(0.96 0.035 75);
+  --status-pending-border: oklch(0.85 0.075 75);
+  --status-pending-text: oklch(0.38 0.075 65);
+
+  --status-rejected-bg: oklch(0.94 0.045 25);
+  --status-rejected-border: oklch(0.82 0.095 25);
+  --status-rejected-text: oklch(0.36 0.105 25);
+
+  --status-suspended-bg: oklch(0.93 0.025 55);
+  --status-suspended-border: oklch(0.80 0.045 55);
+  --status-suspended-text: oklch(0.36 0.045 55);
+}
+
+.dark {
+  /* =========================================================================
+     FoodConnect Design System - Dark Mode (Deep Obsidian & FoodConnect Emerald)
+     Section 5: Foundation #07110D, Emerald #18C77A, Mint #7DE2B2, Amber #F4B942
+     ========================================================================= */
+
+  --background: #07110D;
+  --foreground: #F5F7F5;
+
+  --card: #0D1914;
+  --card-foreground: #F5F7F5;
+
+  --popover: #0D1914;
+  --popover-foreground: #F5F7F5;
+
+  --primary: #18C77A;
+  --primary-foreground: #07110D;
+  --brand-forest: #0B3B2E;
+  --brand-forest-hover: #105240;
+
+  --secondary: #13241C;
+  --secondary-foreground: #B8C8BF;
+
+  --muted: #111E18;
+  --muted-foreground: #7F9188;
+
+  --accent: #152B21;
+  --accent-foreground: #F5F7F5;
+
+  --brand-terracotta: #F97316;
+  --brand-amber: #F4B942;
+  --brand-cream: #FFF8E7;
+  --brand-charcoal: #07110D;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.10);
+  --ring: #18C77A;
+
+  --chart-1: oklch(0.70 0.13 152);
+  --chart-2: oklch(0.68 0.13 45);
+  --chart-3: oklch(0.78 0.13 85);
+  --chart-4: oklch(0.65 0.10 210);
+  --chart-5: oklch(0.72 0.11 65);
+
+  --sidebar: oklch(0.18 0.018 150);
+  --sidebar-foreground: oklch(0.96 0.008 85);
+  --sidebar-primary: oklch(0.70 0.13 152);
+  --sidebar-primary-foreground: oklch(0.14 0.02 150);
+  --sidebar-accent: oklch(0.24 0.018 150);
+  --sidebar-accent-foreground: oklch(0.96 0.008 85);
+  --sidebar-border: oklch(1 1 1 / 12%);
+  --sidebar-ring: oklch(0.70 0.13 152);
+
+  /* FoodConnect Status Tokens - Dark Mode */
+  --status-available-bg: oklch(0.24 0.04 148);
+  --status-available-border: oklch(0.36 0.08 148);
+  --status-available-text: oklch(0.85 0.09 148);
+
+  --status-matching-bg: oklch(0.24 0.035 240);
+  --status-matching-border: oklch(0.38 0.07 240);
+  --status-matching-text: oklch(0.85 0.08 240);
+
+  --status-requested-bg: oklch(0.26 0.04 75);
+  --status-requested-border: oklch(0.40 0.08 75);
+  --status-requested-text: oklch(0.88 0.09 75);
+
+  --status-accepted-bg: oklch(0.24 0.04 175);
+  --status-accepted-border: oklch(0.38 0.08 175);
+  --status-accepted-text: oklch(0.86 0.08 175);
+
+  --status-collection-assigned-bg: oklch(0.25 0.035 295);
+  --status-collection-assigned-border: oklch(0.39 0.07 295);
+  --status-collection-assigned-text: oklch(0.88 0.08 295);
+
+  --status-collected-bg: oklch(0.24 0.04 215);
+  --status-collected-border: oklch(0.38 0.08 215);
+  --status-collected-text: oklch(0.86 0.08 215);
+
+  --status-distributed-bg: oklch(0.23 0.05 145);
+  --status-distributed-border: oklch(0.38 0.10 145);
+  --status-distributed-text: oklch(0.88 0.09 145);
+
+  --status-verified-bg: oklch(0.24 0.04 155);
+  --status-verified-border: oklch(0.38 0.09 155);
+  --status-verified-text: oklch(0.88 0.09 155);
+
+  --status-closed-bg: oklch(0.22 0.01 85);
+  --status-closed-border: oklch(0.32 0.015 85);
+  --status-closed-text: oklch(0.72 0.02 85);
+
+  --status-active-need-bg: oklch(0.26 0.05 45);
+  --status-active-need-border: oklch(0.42 0.10 45);
+  --status-active-need-text: oklch(0.88 0.10 45);
+
+  --status-partially-fulfilled-bg: oklch(0.26 0.04 88);
+  --status-partially-fulfilled-border: oklch(0.40 0.08 88);
+  --status-partially-fulfilled-text: oklch(0.88 0.08 88);
+
+  --status-fulfilled-bg: oklch(0.24 0.05 150);
+  --status-fulfilled-border: oklch(0.38 0.09 150);
+  --status-fulfilled-text: oklch(0.88 0.09 150);
+
+  --status-expired-bg: oklch(0.22 0.015 50);
+  --status-expired-border: oklch(0.34 0.025 50);
+  --status-expired-text: oklch(0.72 0.025 50);
+
+  --status-pending-bg: oklch(0.25 0.03 75);
+  --status-pending-border: oklch(0.38 0.06 75);
+  --status-pending-text: oklch(0.85 0.07 75);
+
+  --status-rejected-bg: oklch(0.25 0.04 25);
+  --status-rejected-border: oklch(0.40 0.09 25);
+  --status-rejected-text: oklch(0.86 0.09 25);
+
+  --status-suspended-bg: oklch(0.24 0.02 55);
+  --status-suspended-border: oklch(0.36 0.04 55);
+  --status-suspended-text: oklch(0.78 0.04 55);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/15 selection:text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+
+  /* Clear, WCAG-conscious focus outline across interactive elements */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Accessible reduced-motion handling */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Warm editorial surfaces & card depths (preserving warmth, no generic clinical look) */
+  .surface-warm {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+  }
+
+  .surface-elevated {
+    box-shadow: 0 2px 10px -2px rgba(35, 45, 38, 0.05), 0 1px 3px rgba(35, 45, 38, 0.03);
+  }
+
+  .surface-elevated-hover {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  }
+  .surface-elevated-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -4px rgba(35, 45, 38, 0.08), 0 2px 6px rgba(35, 45, 38, 0.04);
+  }
+
+  /* Restrained floating overlay (Strictly for badges & metadata over photography; never entire dashboard) */
+  .surface-floating-overlay {
+    background-color: color-mix(in oklch, var(--background) 92%, transparent);
+    backdrop-filter: blur(4px);
+    border: 1px solid color-mix(in oklch, var(--border) 80%, transparent);
+  }
+
+  /* Micro-tactile interactive press feedback */
+  .tap-tactile {
+    transition: transform 0.1s ease-out;
+  }
+  .tap-tactile:active {
+    transform: scale(0.985);
+  }
+
+  /* Fast 0ms tap responsiveness on mobile and touch devices */
+  html {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  a, button {
+    touch-action: manipulation;
+  }
+
+  /* Tabular numeral alignment for impact counters and distance metrics */
+  .numeral-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* 21st.dev Taste-Skill Tokens: Deep Obsidian Dark Mode & Radar Dynamics */
+  .bg-grid-obsidian {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  }
+
+  .radar-beam {
+    background: conic-gradient(from 0deg at 50% 50%, rgba(16, 185, 129, 0.22) 0deg, rgba(16, 185, 129, 0) 60deg, transparent 360deg);
+  }
+
+  @keyframes radar-sweep-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-radar-sweep {
+    animation: radar-sweep-spin 6s linear infinite;
+  }
+
+  /* Radial dot matrix mask for deep obsidian canvas */
+  .bg-radial-grid {
+    background-size: 24px 24px;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  }
+
+  @keyframes holo-shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .border-holographic {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(59, 130, 246, 0.3), rgba(245, 158, 11, 0.4), rgba(16, 185, 129, 0.4));
+    background-size: 300% 300%;
+    animation: holo-shimmer 6s ease infinite;
+  }
+}

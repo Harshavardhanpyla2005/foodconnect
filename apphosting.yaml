@@ -1,0 +1,14 @@
+# Firebase App Hosting Configuration for Next.js (Full-stack SSR / API routes)
+# Reference: https://firebase.google.com/docs/app-hosting/configure
+runConfig:
+  minInstances: 0
+  maxInstances: 2
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 1024
+
+env:
+  - variable: NODE_ENV
+    value: production
+  - variable: NEXT_PUBLIC_APP_URL
+    value: https://foodconnect-vizag.web.app
